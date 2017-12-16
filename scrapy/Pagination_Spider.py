@@ -28,3 +28,6 @@ class QuotesSpider(scrapy.Spider):
             # New requests must be created every time there is a next page
             yield scrapy.Request(url=next_page_url, callback=self.parse)
 
+            # Can also use response.follow , no need to call urljoin  like above
+            # yield response.follow(next_page_url, callback=self.parse)
+

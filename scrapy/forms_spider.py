@@ -37,3 +37,15 @@ class LoginSpider(scrapy.Spider):
                 'author_url': q.css('span a+ a::attr(href)').extract_first()
 
             }
+
+
+"""
+        return scrapy.FormRequest.from_response(response,
+
+                                                formdata={'username': 'abc',
+                                                          'password': 'abc'
+                                                          },
+
+                                                callback=self.parse_quotes
+                                                )
+"""

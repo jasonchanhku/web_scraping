@@ -9,7 +9,7 @@ library(data.table)
 library(dtplyr)
 
 #extracting all the URLs
-webpage <- read_html("http://www.fightmetric.com/statistics/events/completed?page=all")
+webpage <- read_html(""http://ufcstats.com/statistics/events/completed?page=all"")
 urls <- webpage %>% html_nodes(".b-link_style_black") %>% html_attr("href")
 
 #initialization
